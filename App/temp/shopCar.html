@@ -1,0 +1,46 @@
+<div ng-controller="ionicController" class="box">
+    <div class="bar bar-header head_top">
+        <span>购物车（22）</span>
+        <span>编辑</span>
+    </div>
+    <div class="main content">
+        <shop
+                ng-repeat="pro in products"
+                index="{{$index}}"
+                pro="pro">
+
+        </shop>
+        <div class="main_bot">
+            <ul class="list">
+                <li class="item item-checkbox two">
+                    <label class="checkbox">
+                        <input type="checkbox" ng-click="checkAll()" ng-model="flag" class="nums">
+                    </label>全选
+                    <span>不含运费<b>合计:</b><i>{{num}}</i><em>结算<b>{{total}}</b></em></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bar bar-footer foot_bot">
+            <span>
+                <b class="iconfont">&#xe648;</b>
+                <b>首页</b>
+            </span>
+            <span>
+                <b class="iconfont">&#xe696;</b>
+                <b>微淘</b>
+            </span>
+            <span>
+                <b class="iconfont">&#xe60e;</b>
+                <b>消息</b>
+            </span>
+            <span>
+                <b class="iconfont">&#xe638;</b>
+                <b>购物车</b>
+            </span>
+            <span>
+                <b class="iconfont">&#xe611;</b>
+                <b>我的淘宝</b>
+            </span>
+    </div>
+</div>

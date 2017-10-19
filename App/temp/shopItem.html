@@ -1,0 +1,24 @@
+
+<ul class="list">
+    <li class="item item-checkbox first">
+        <span><b class="iconfont">&#xe725;</b>白芷电器<b class="iconfont">&#xe6d6;</b></span>
+        <em class="del" ng-click="delEvent($index)">X</em>
+    </li>
+    <li class="item item-checkbox main_dl">
+        <label class="checkbox check">
+            <input ng-click="iptEvent(pro.id)" type="checkbox" ng-model="pro.state">
+        </label>
+        <dl>
+            <dt><img ng-src="{{pro.image}}"></dt>
+            <dd>
+                <h1>
+                   {{pro.title}}
+                </h1>
+                <i>{{pro.name}}</i>
+                <b>￥{{pro.price}}</b>
+                <span><em></em></span>
+                <span class="addSpan"><b class="remo" ng-click="spnClick('-')">-</b><b class="addNum">{{pro.num}}</b><b class="add" ng-click="spnClick('+')">+</b></span>
+            </dd>
+        </dl>
+    </li>
+</ul>
